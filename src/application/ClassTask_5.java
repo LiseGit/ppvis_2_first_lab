@@ -10,13 +10,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TitledPane;
+//import javafx.scene.control.TitledPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import javafxapplication1.ClassTask_5.MyTableData;
+import application.ClassTask_5.MyTableData;
 
 public class ClassTask_5 extends StackPane{
-    private final String mName = "Задание 5";   //--неизменяемое название
+   // private final String mName = "Задание 5";   //--неизменяемое название
     
     public  class MyTableData{  //---класс представляющий строку данных в таблице
         private  StringProperty FirstValue = new SimpleStringProperty();
@@ -76,6 +76,7 @@ public class ClassTask_5 extends StackPane{
                 table.setItems(tableData);
                 table.getSelectionModel().selectLast();
             }
+            textField.clear();  //--очистка текстового поля
         });
         //--------------------------вторая кнопка-------------------------
         Button btn2 = new Button();
@@ -110,9 +111,10 @@ public class ClassTask_5 extends StackPane{
         hBox.getChildren().add(btn2);
         hBox.getChildren().add(btn3);
         hBox.getChildren().add(table);
-        
+        /*
         TitledPane  titledContent = new TitledPane (mName, hBox);        
-        getChildren().add(titledContent);
+        getChildren().add(titledContent);*/
+        getChildren().add(hBox);
     }
 }
 

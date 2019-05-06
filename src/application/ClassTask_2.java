@@ -4,16 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TitledPane;
+//import javafx.scene.control.TitledPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 
 public class ClassTask_2 extends StackPane {
-    private final String mName = "Задание 2";   //--неизменяемое название
+  //  private final String mName = "Задание 2";   //--неизменяемое название
     ClassTask_2(){
         TextField textField = new TextField();
-        Button btn2 = new Button();
         Button btn1 = new Button();
+        Button btn2 = new Button();
         btn1.setText("Button 1");
         btn1.setMinWidth(80);
         btn1.setOnAction((ActionEvent event) -> {
@@ -42,7 +42,8 @@ public class ClassTask_2 extends StackPane {
         hBox.getChildren().add(textField);
         hBox.getChildren().add(btn1);
         hBox.getChildren().add(btn2);
-        TitledPane  titledContent = new TitledPane (mName, hBox);        
-        getChildren().add(titledContent);
+        /*TitledPane  titledContent = new TitledPane (mName, hBox);
+        getChildren().add(titledContent);*/
+        getChildren().add(hBox);
     }
 }

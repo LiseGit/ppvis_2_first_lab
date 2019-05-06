@@ -8,13 +8,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TitledPane;
+//import javafx.scene.control.TitledPane;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 
 public class ClassTask_3 extends StackPane{
-    private final String mName = "Задание 3";   //--неизменяемое название
+   // private final String mName = "Задание 3";   //--неизменяемое название
     ClassTask_3(){
         ToggleGroup group = new ToggleGroup();
         Map<String,RadioButton> mRadioBoxValue = new LinkedHashMap<>();   // LinkedHashMap - для хранения элементов в порядае добавления
@@ -65,9 +65,10 @@ public class ClassTask_3 extends StackPane{
         mRadioBoxValue.entrySet().stream().forEach((item) -> {
             hBox.getChildren().add(item.getValue());
         });
-        
+       /* 
         TitledPane  titledContent = new TitledPane (mName, hBox);        
-        getChildren().add(titledContent);
+        getChildren().add(titledContent);*/
+        getChildren().add(hBox);
     }
 }
 
